@@ -116,7 +116,7 @@
 /**********************/
 
 .main-heading-small {
-  margin: 1.2rem 0 6.4rem 0;
+  margin: 1.2rem 0 4.8rem 0;
   padding: 2rem 0;
   font-size: 1.2rem;
 }
@@ -134,7 +134,7 @@
   background-size: cover;
   background-position: center;
 
-  color: #eeeeee;
+  color: #fff;
   border-radius: 0.8rem;
   margin-bottom: 7.2rem;
 }
@@ -142,27 +142,24 @@
 .section-hero-heading {
   font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+
+  margin-bottom: 2.4rem;
 }
 
 .section-hero-description {
   font-size: 1.6rem;
   font-weight: 300;
 
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
+  margin-bottom: 2.4rem;
 }
 
 /***********************/
 /* BIG MESSAGE SECTION */
 /***********************/
 .section-big-message-text {
-  padding: 2rem;
-  font-size: 3.6rem;
-  text-wrap: wrap;
+  font-size: 3.2rem;
+  font-weight: 700;
 
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
+  color: #141719;
+  letter-spacing: 1.2px;
 }
