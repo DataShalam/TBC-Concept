@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1px;
+  font-weight: 500;
+  color: #555;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  max-width: 110rem;
+  margin: 8rem auto 0 auto;
+
+  overflow: hidden;
+}
+
+/*******************************/
+/* General Reusable Components */
+/*******************************/
+
+.vl {
+  border-left: 1px solid #555;
+  display: inline;
+  height: 2.4rem;
+  margin-right: 0.8rem;
+}
+
+.btn {
+  padding: 1.6rem 2.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.33;
+  background-color: #001682;
+  border-radius: 0.6rem;
+  color: #eeeeee;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  transition: all 0.25s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #3295ce;
+  transition: all 0.25s ease-in-out;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 42px;
+  padding: 9.5rem;
+}
