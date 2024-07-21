@@ -32,6 +32,11 @@
   margin-right: 0.8rem;
 }
 
+.concept {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
 .nav-svg {
   font-size: 2.4rem;
   margin-right: 0.8rem;
@@ -125,6 +130,11 @@
 /* HERO SECTION */
 /****************/
 .section-hero {
+  color: #fff;
+  padding: 3.2rem 0 6rem 0;
+}
+
+.background-img-one {
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.35),
@@ -132,11 +142,7 @@
     ),
     url("https://static.tbcconcept.ge/desktop/media/ze324k50.yq4Become-2.webp");
   background-size: cover;
-  background-position: center;
-
-  color: #fff;
   border-radius: 0.8rem;
-  margin-bottom: 7.2rem;
 }
 
 .section-hero-heading {
@@ -158,8 +164,95 @@
 /***********************/
 .section-big-message-text {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 600;
+
+  padding: 6rem 0;
 
   color: #141719;
   letter-spacing: 1.2px;
+}
+
+/**************************/
+/* BECOME CONCEPT SECTION */
+/**************************/
+.section-become-concept {
+  padding: 6rem 0;
+}
+
+.package-container {
+  padding: 4rem;
+  color: #fff;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+
+  background-position: center;
+  border-radius: 1.2rem;
+  transition: background-size 0.3s ease-in-out,
+    background-position 0.3s ease-in-out;
+}
+
+.package-container a {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.package-name {
+  margin: 12.8rem 0 1.2rem 0;
+  font-size: 2.4rem;
+}
+
+.digital-background {
+  background-image: linear-gradient(
+      to right bottom,
+
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://static.tbcconcept.ge/desktop/media/mfvvitla.0j5430128849_7213815365374065_9017687812435872577_n.png");
+
+  background-size: 100%;
+}
+
+.digital-background:hover {
+  background-size: 103%;
+}
+
+.premium-background {
+  background-image: linear-gradient(
+      to right bottom,
+
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://static.tbcconcept.ge/desktop/media/0m25n3qt.w03prem.png");
+
+  background-size: 100%;
+}
+
+.premium-background:hover {
+  background-size: 103%;
+}
+
+.background-360 {
+  background-image: linear-gradient(
+      to right bottom,
+
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://static.tbcconcept.ge/desktop/media/nqeaa1rb.avl360.png");
+
+  grid-row: span 2;
+
+  background-size: 187%;
+}
+
+.background-360:hover {
+  background-size: 192%;
 }
