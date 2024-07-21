@@ -131,7 +131,7 @@
 /****************/
 .section-hero {
   color: #fff;
-  padding: 3.2rem 0 6rem 0;
+  padding: 3.2rem 0;
 }
 
 .background-img-one {
@@ -166,8 +166,6 @@
   font-size: 3.2rem;
   font-weight: 600;
 
-  padding: 6rem 0;
-
   color: #141719;
   letter-spacing: 1.2px;
 }
@@ -175,10 +173,6 @@
 /**************************/
 /* BECOME CONCEPT SECTION */
 /**************************/
-.section-become-concept {
-  padding: 6rem 0;
-}
-
 .package-container {
   padding: 4rem;
   color: #fff;
@@ -203,7 +197,7 @@
 }
 
 .package-name {
-  margin: 12.8rem 0 1.2rem 0;
+  margin: 8.6rem 0 1.2rem 0;
   font-size: 2.4rem;
 }
 
@@ -255,4 +249,36 @@
 
 .background-360:hover {
   background-size: 192%;
+}
+
+/*******************/
+/* NUMBERS SECTION */
+/*******************/
+.section-numbers {
+  display: flex;
+  grid-column-gap: 30px;
+}
+
+.numbers-container {
+  padding: 4rem 4.8rem;
+  color: #141719;
+
+  grid-row-gap: 16px;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10rem 3.2rem #eeeeee60;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.numbers-container h3 {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+
+.numbers-container p {
+  font-size: 1.6rem;
+  font-weight: 500;
 }

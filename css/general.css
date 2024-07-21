@@ -27,8 +27,10 @@ a {
 main {
   max-width: 110rem;
   margin: 8rem auto 0 auto;
+}
 
-  overflow: hidden;
+section {
+  padding: 6rem 0;
 }
 
 /*******************************/
