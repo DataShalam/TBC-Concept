@@ -38,7 +38,7 @@
 }
 
 .nav-svg {
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-right: 0.8rem;
 }
 
@@ -281,4 +281,52 @@
 .numbers-container p {
   font-size: 1.6rem;
   font-weight: 500;
+}
+/******************/
+/* OFFERS SECTION */
+/******************/
+.offers-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.offers-wrapper {
+  overflow-x: auto;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3.2rem;
+}
+
+.offers-item {
+  border: 1px solid #e1e4e5;
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  object-fit: cover;
+}
+
+.offers-item img {
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.offers-item h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  color: #141719;
+  padding: 0 2.8rem 3.6rem 2.8rem;
+}
+
+.offer-tags {
+  padding: 2.8rem 2.8rem 0 2.8rem;
+  font-weight: 600;
+
+  display: flex;
+  gap: 0.8rem;
 }
