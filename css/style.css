@@ -292,11 +292,21 @@
 }
 
 .offers-wrapper {
-  overflow-x: auto;
+  overflow-x: scroll;
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 3.2rem;
+
+  /* FOR MOZILA */
+  scrollbar-width: none;
+  /* FOR Old MOZILA */
+  overflow: -moz-scrollbars-none;
+}
+
+.offers-wrapper::-webkit-scrollbar {
+  /* FOR CHROME */
+  display: none;
 }
 
 .offers-item {
@@ -306,13 +316,20 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  margin-bottom: 2.4rem;
 
-  object-fit: cover;
+  transition: 200ms linear;
 }
 
 .offers-item img {
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
+}
+
+.offers-item:hover {
+  box-shadow: 0 0 3.2rem rgba(20, 23, 25, 0.1);
+
+  transition: 200ms linear;
 }
 
 .offers-item h3 {
@@ -329,4 +346,74 @@
 
   display: flex;
   gap: 0.8rem;
+}
+
+.slider-container {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.slider-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.slider-buttons ion-icon {
+  transition: 200ms linear;
+
+  cursor: pointer;
+}
+
+.slider-buttons ion-icon:hover {
+  color: #007aff;
+
+  transition: 200ms linear;
+}
+
+.slider-container .slider-scrollbar {
+  height: 2.4rem;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  position: relative;
+  height: 0.2rem;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 0.4rem;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background-color: #182cc0;
+  border-radius: inherit;
+  cursor: grab;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 0.4rem;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1rem;
+  bottom: -1rem;
+}
+
+.slider-scrollbar .scrollbar-track:active {
+  cursor: grabbing;
+  height: 0.8rem;
+  top: -2px;
 }
