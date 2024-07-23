@@ -1,5 +1,6 @@
 const initSlider = () => {
   const offersList = document.querySelector(".offers-wrapper");
+  const offerItem = document.querySelector(".offers-item");
   const sliderButtons = document.querySelectorAll(".slider-buttons .nav-svg");
   const sliderScrollBar = document.querySelector(".slider-scrollbar");
   const scrollBarThumb = document.querySelector(".scrollbar-thumb");
@@ -39,8 +40,8 @@ const initSlider = () => {
 
   sliderButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const direction = button.id === "previous-btn" ? -(1 / 3) : 1 / 3;
-      const scrollAmount = offersList.clientWidth * direction;
+      const direction = button.id === "previous-btn" ? -1 : 1;
+      const scrollAmount = (offerItem.clientWidth + 32) * direction;
 
       offersList.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
