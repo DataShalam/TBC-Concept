@@ -1,9 +1,10 @@
+const offersList = document.querySelector(".offers-wrapper");
+const offerItem = document.querySelector(".offers-item");
+const sliderButtons = document.querySelectorAll(".slider-buttons .nav-svg");
+const sliderScrollBar = document.querySelector(".slider-scrollbar");
+const scrollBarThumb = document.querySelector(".scrollbar-thumb");
+
 const initSlider = () => {
-  const offersList = document.querySelector(".offers-wrapper");
-  const offerItem = document.querySelector(".offers-item");
-  const sliderButtons = document.querySelectorAll(".slider-buttons .nav-svg");
-  const sliderScrollBar = document.querySelector(".slider-scrollbar");
-  const scrollBarThumb = document.querySelector(".scrollbar-thumb");
   const maxScrollLeft = offersList.scrollWidth - offersList.clientWidth;
 
   // handle scrollbar thumb drag
@@ -41,7 +42,7 @@ const initSlider = () => {
   sliderButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const direction = button.id === "previous-btn" ? -1 : 1;
-      const scrollAmount = (offerItem.clientWidth + 32) * direction;
+      const scrollAmount = (offerItem.clientWidth + 33) * direction;
 
       offersList.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });

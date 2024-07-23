@@ -122,7 +122,7 @@
 
 .main-heading-small {
   margin: 1.2rem 0 4.8rem 0;
-  padding: 2rem 0;
+  padding-top: 2rem;
   font-size: 1.2rem;
 }
 
@@ -141,6 +141,17 @@
       rgba(0, 0, 0, 0.5)
     ),
     url("https://static.tbcconcept.ge/desktop/media/ze324k50.yq4Become-2.webp");
+  background-size: cover;
+  border-radius: 0.8rem;
+}
+
+.background-img-two {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://static.tbcconcept.ge/desktop/media/nvmgsymp.3xqprivate banker.png");
   background-size: cover;
   border-radius: 0.8rem;
 }
@@ -324,6 +335,7 @@
 }
 
 .offers-item img {
+  height: 20.5rem;
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
 }
@@ -445,4 +457,48 @@
 
 .digital-bank-downloads-btn p {
   font-size: 1.4rem;
+}
+
+/********************/
+/* PRODUCTS SECTION */
+/********************/
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+.products h3 {
+  padding-bottom: 0;
+}
+
+.products img {
+  height: 20rem;
+}
+
+.products div {
+  padding-top: 0;
+  padding-bottom: 1.4rem;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.products-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2.4rem;
+}
+
+.products-buttons ion-icon {
+  transition: 200ms linear;
+
+  cursor: pointer;
+}
+
+.products-buttons ion-icon:hover {
+  color: #007aff;
+
+  transition: 200ms linear;
 }
