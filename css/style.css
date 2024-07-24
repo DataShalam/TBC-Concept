@@ -35,6 +35,7 @@
 .concept {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
+  font-size: 2.4rem;
 }
 
 .nav-svg {
@@ -368,7 +369,7 @@
   justify-content: space-between;
 }
 
-.slider-buttons {
+.offers-slider-buttons {
   display: flex;
 
   align-items: center;
@@ -376,19 +377,19 @@
   gap: 2.4rem;
 }
 
-.slider-buttons ion-icon {
+.offers-slider-buttons ion-icon {
   transition: 200ms linear;
 
   cursor: pointer;
 }
 
-.slider-buttons ion-icon:hover {
+.offers-slider-buttons ion-icon:hover {
   color: #007aff;
 
   transition: 200ms linear;
 }
 
-.slider-container .slider-scrollbar {
+.slider-container .offers-slider-scrollbar {
   height: 2.4rem;
   width: 90%;
 
@@ -396,7 +397,7 @@
   align-items: center;
 }
 
-.slider-scrollbar .scrollbar-track {
+.offers-slider-scrollbar .scrollbar-track {
   position: relative;
   height: 0.2rem;
   width: 100%;
@@ -404,7 +405,7 @@
   border-radius: 0.4rem;
 }
 
-.slider-scrollbar .scrollbar-thumb {
+.offers-slider-scrollbar .offers-scrollbar-thumb {
   position: absolute;
   height: 100%;
   width: 25%;
@@ -413,11 +414,11 @@
   cursor: grab;
 }
 
-.slider-scrollbar:hover .scrollbar-track {
+.offers-slider-scrollbar:hover .scrollbar-track {
   height: 0.4rem;
 }
 
-.slider-scrollbar .scrollbar-thumb::after {
+.offers-slider-scrollbar .offers-scrollbar-thumb::after {
   content: "";
   position: absolute;
   left: 0;
@@ -426,7 +427,7 @@
   bottom: -1rem;
 }
 
-.slider-scrollbar .scrollbar-track:active {
+.offers-slider-scrollbar .scrollbar-track:active {
   cursor: grabbing;
   height: 0.8rem;
   top: -2px;
@@ -501,4 +502,151 @@
   color: #007aff;
 
   transition: 200ms linear;
+}
+
+/******************/
+/* AWARDS SECTION */
+/******************/
+.awards-wrapper {
+  overflow-x: scroll;
+  display: flex;
+
+  gap: 3.2rem;
+
+  /* FOR MOZILA */
+  scrollbar-width: none;
+  /* FOR Old MOZILA */
+  overflow: -moz-scrollbars-none;
+}
+
+.awards-wrapper::-webkit-scrollbar {
+  /* FOR CHROME */
+  display: none;
+}
+
+.awards-item img {
+  height: 5.2rem;
+  width: auto;
+}
+
+.awards-image-wrapper {
+  width: 28rem;
+}
+
+.awards-image-wrapper:last-child {
+  padding-right: 25rem;
+}
+
+.awards-item {
+  border: 1px solid #e1e4e5;
+  border-radius: 0.8rem;
+  padding: 2.8rem;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+
+  transition: 200ms linear;
+
+  cursor: pointer;
+  width: 100%;
+}
+
+.awards-item:hover {
+  box-shadow: 0 0 3.2rem rgba(20, 23, 25, 0.1);
+
+  transition: 200ms linear;
+}
+
+.awards-item h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #141719;
+}
+
+.awards-item p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.awards-slider-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.awards-slider-buttons ion-icon {
+  transition: 200ms linear;
+
+  cursor: pointer;
+}
+
+.awards-slider-buttons ion-icon:hover {
+  color: #007aff;
+
+  transition: 200ms linear;
+}
+
+.slider-container .awards-slider-scrollbar {
+  height: 2.4rem;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+}
+
+.awards-slider-scrollbar .scrollbar-track {
+  position: relative;
+  height: 0.2rem;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 0.4rem;
+}
+
+.awards-slider-scrollbar .awards-scrollbar-thumb {
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background-color: #182cc0;
+  border-radius: inherit;
+  cursor: grab;
+}
+
+.awards-slider-scrollbar:hover .scrollbar-track {
+  height: 0.4rem;
+}
+
+.awards-slider-scrollbar .awards-scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1rem;
+  bottom: -1rem;
+}
+
+.awards-slider-scrollbar .scrollbar-track:active {
+  cursor: grabbing;
+  height: 0.8rem;
+  top: -2px;
+}
+
+footer {
+  background-color: white;
+}
+
+/******************/
+/* FOOTER  */
+/******************/
+.footer-top {
+  padding-top: 2.8rem;
+  /* background-color: #fff; */
+  width: 110rem;
+  margin: 0 auto;
 }

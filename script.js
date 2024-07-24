@@ -1,31 +1,35 @@
 const offersList = document.querySelector(".offers-wrapper");
 const offerItem = document.querySelector(".offers-item");
-const sliderButtons = document.querySelectorAll(".slider-buttons .nav-svg");
-const sliderScrollBar = document.querySelector(".slider-scrollbar");
-const scrollBarThumb = document.querySelector(".scrollbar-thumb");
+const offersSliderButtons = document.querySelectorAll(
+  ".offers-slider-buttons .nav-svg"
+);
+const offersSliderScrollBar = document.querySelector(
+  ".offers-slider-scrollbar"
+);
+const offersScrollBarThumb = document.querySelector(".offers-scrollbar-thumb");
 
-const initSlider = () => {
+const offersInitSlider = () => {
   const maxScrollLeft = offersList.scrollWidth - offersList.clientWidth;
 
   // handle scrollbar thumb drag
-  scrollBarThumb.addEventListener("mousedown", (e) => {
+  offersScrollBarThumb.addEventListener("mousedown", (e) => {
     const startX = e.clientX;
-    const thumbPosition = scrollBarThumb.offsetLeft;
+    const thumbPosition = offersScrollBarThumb.offsetLeft;
 
     // update thumb position on mouse move
     const handleMouseMove = (e) => {
       const deltaX = e.clientX - startX;
       const newThumbPosition = thumbPosition + deltaX;
       const maxThumbPosition =
-        sliderScrollBar.getBoundingClientRect().width -
-        scrollBarThumb.offsetWidth;
+        offersSliderScrollBar.getBoundingClientRect().width -
+        offersScrollBarThumb.offsetWidth;
       const boundedPosition = Math.max(
         0,
         Math.min(maxThumbPosition, newThumbPosition)
       );
       const scrollPosition =
         (boundedPosition / maxThumbPosition) * maxScrollLeft;
-      scrollBarThumb.style.left = `${boundedPosition}px`;
+      offersScrollBarThumb.style.left = `${boundedPosition}px`;
       offersList.scrollLeft = scrollPosition;
     };
 
@@ -39,7 +43,7 @@ const initSlider = () => {
     document.addEventListener("mouseup", handleMouseUp);
   });
 
-  sliderButtons.forEach((button) => {
+  offersSliderButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const direction = button.id === "previous-btn" ? -1 : 1;
       const scrollAmount = (offerItem.clientWidth + 33) * direction;
@@ -52,8 +56,8 @@ const initSlider = () => {
     const scrollPosition = offersList.scrollLeft;
     const thumbPosition =
       (scrollPosition / maxScrollLeft) *
-      (sliderScrollBar.clientWidth - scrollBarThumb.offsetWidth);
-    scrollBarThumb.style.left = `${thumbPosition}px`;
+      (offersSliderScrollBar.clientWidth - offersScrollBarThumb.offsetWidth);
+    offersScrollBarThumb.style.left = `${thumbPosition}px`;
   };
 
   offersList.addEventListener("scroll", () => {
@@ -61,4 +65,74 @@ const initSlider = () => {
   });
 };
 
-window.addEventListener("load", initSlider);
+const awardsList = document.querySelector(".awards-wrapper");
+const awardsItem = document.querySelector(".awards-item");
+const awardsSliderButtons = document.querySelectorAll(
+  ".awards-slider-buttons .nav-svg"
+);
+const awardsSliderScrollBar = document.querySelector(
+  ".awards-slider-scrollbar"
+);
+const awardsScrollBarThumb = document.querySelector(".awards-scrollbar-thumb");
+
+const awardsInitSlider = () => {
+  const maxScrollLeft = awardsList.scrollWidth - awardsList.clientWidth;
+
+  // handle scrollbar thumb drag
+  awardsScrollBarThumb.addEventListener("mousedown", (e) => {
+    const startX = e.clientX;
+    const thumbPosition = awardsScrollBarThumb.offsetLeft;
+
+    // update thumb position on mouse move
+    const handleMouseMove = (e) => {
+      const deltaX = e.clientX - startX;
+      const newThumbPosition = thumbPosition + deltaX;
+      const maxThumbPosition =
+        awardsSliderScrollBar.getBoundingClientRect().width -
+        awardsScrollBarThumb.offsetWidth;
+      const boundedPosition = Math.max(
+        0,
+        Math.min(maxThumbPosition, newThumbPosition)
+      );
+      const scrollPosition =
+        (boundedPosition / maxThumbPosition) * maxScrollLeft;
+      awardsScrollBarThumb.style.left = `${boundedPosition}px`;
+      awardsList.scrollLeft = scrollPosition;
+    };
+
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    // drag interaction
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  });
+
+  awardsSliderButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = button.id === "previous-btn" ? -1 : 1;
+      const scrollAmount = (awardsItem.clientWidth + 33) * direction;
+
+      awardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });
+
+  const updateScrollThumbPosition = () => {
+    const scrollPosition = awardsList.scrollLeft;
+    const thumbPosition =
+      (scrollPosition / maxScrollLeft) *
+      (awardsSliderScrollBar.clientWidth - awardsScrollBarThumb.offsetWidth);
+    awardsScrollBarThumb.style.left = `${thumbPosition}px`;
+  };
+
+  awardsList.addEventListener("scroll", () => {
+    updateScrollThumbPosition();
+  });
+};
+
+window.addEventListener("load", () => {
+  offersInitSlider();
+  awardsInitSlider();
+});
