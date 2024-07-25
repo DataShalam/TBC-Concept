@@ -650,3 +650,96 @@ footer {
   width: 110rem;
   margin: 0 auto;
 }
+
+.footer-mid {
+  padding-top: 2.8rem;
+  width: 110rem;
+  margin: 0 auto;
+}
+
+.footer-subheading {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #141719;
+  padding-bottom: 2.4rem;
+}
+
+.footer-links {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-links a {
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  transition: 200ms linear;
+}
+
+.footer-links ion-icon {
+  font-size: 1.6rem;
+  font-weight: 700;
+  --ionicon-stroke-width: 4.8rem;
+}
+
+.footer-links a:hover {
+  color: #182cc0;
+
+  transition: 200ms linear;
+}
+
+.footer-icons {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2.4rem;
+}
+
+.footer-icons div {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.footer-icons ion-icon {
+  font-size: 2.4rem;
+
+  border-radius: 1.4rem;
+  background-color: #eeeeee;
+  padding: 1.4rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 2.4rem 0 2.4rem 0;
+  width: 110rem;
+  margin: 0 auto;
+}
+
+.footer-bottom div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+
+  font-size: 1.2rem;
+}
+
+.footer-bottom a {
+  cursor: pointer;
+
+  transition: 200ms linear;
+}
+
+.footer-bottom a:hover {
+  color: #182cc0;
+
+  transition: 200ms linear;
+}
