@@ -136,3 +136,37 @@ window.addEventListener("load", () => {
   offersInitSlider();
   awardsInitSlider();
 });
+
+///////////////////////////////////////////////////
+const burgerMenu = document.querySelector(".burger-menu");
+const closeMenu = document.querySelector(".close");
+const mobileNav = document.querySelector(".mobile-navigation");
+const headings = document.querySelectorAll(".accordian-item .subheading");
+
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.style.display = "none";
+  closeMenu.style.display = "block";
+  mobileNav.style.zIndex = "100";
+  mobileNav.style.opacity = "1";
+});
+
+closeMenu.addEventListener("click", () => {
+  closeMenu.style.display = "none";
+  burgerMenu.style.display = "block";
+  mobileNav.style.zIndex = "-100";
+  mobileNav.style.opacity = "0";
+});
+
+headings.forEach((heading) => {
+  heading.addEventListener("click", () => {
+    const content = heading.nextElementSibling;
+    content.classList.toggle("open");
+
+    // Optionally, close other accordions
+    headings.forEach((h) => {
+      if (h !== heading) {
+        h.nextElementSibling.classList.remove("open");
+      }
+    });
+  });
+});
