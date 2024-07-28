@@ -62,4 +62,190 @@
   footer .localization {
     display: block;
   }
+
+  .digital-bank-downloads-btn {
+    display: none;
+  }
+
+  .section-digital-bank .description {
+    display: none;
+  }
+
+  .section-digital-bank .description-mob {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  .section-digital-bank .flex-center {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+  }
+
+  .digital-bank-downloads-btn-mob {
+    display: block;
+
+    width: 100%;
+    margin-top: -4px;
+    padding: 1.2rem;
+    font-weight: 600;
+
+    color: #182cc0;
+    border: 1px solid #182cc0;
+  }
+}
+
+@media (max-width: 765px) {
+  header .container-margin {
+    max-width: 70rem;
+  }
+
+  .header .concept {
+    display: none;
+  }
+
+  .header .vl {
+    display: none;
+  }
+
+  .section-hero .container-margin {
+    padding: 0;
+  }
+
+  .background-img-one {
+    border-radius: 0;
+  }
+
+  .section-hero .flex-column-left {
+    padding: 24rem 4.5rem 3.6rem;
+  }
+
+  .section-hero button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-become-concept .container-margin {
+    overflow: scroll;
+  }
+
+  .package-container {
+    min-width: 35rem;
+  }
+
+  .digital-background {
+    background-size: cover;
+    /* width: 35rem; */
+
+    padding: 2.4rem;
+  }
+
+  .premium-background {
+    background-size: cover;
+  }
+
+  .background-360 {
+    background-size: cover;
+  }
+
+  .digital-background:hover {
+    background-size: cover;
+  }
+
+  .premium-background:hover {
+    background-size: cover;
+  }
+
+  .background-360:hover {
+    background-size: cover;
+  }
+
+  .grid-2-col {
+    display: flex;
+  }
+
+  .background-img-two {
+    border-radius: 0;
+  }
+
+  .digital-bank-downloads-btn {
+    display: none;
+  }
+
+  .section-digital-bank img {
+    height: 480px;
+  }
+
+  .section-digital-bank .description {
+    display: none;
+  }
+
+  .section-digital-bank .description-mob {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  .section-digital-bank .flex-center {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+  }
+
+  .digital-bank-downloads-btn-mob {
+    display: block;
+
+    width: 100%;
+    margin-top: -4px;
+    padding: 1.2rem;
+    font-weight: 600;
+
+    color: #182cc0;
+    border: 1px solid #182cc0;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .footer-mob {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-margin {
+    padding: 0 1.5rem;
+    line-height: 1.5;
+  }
+
+  .section-hero-heading {
+    font-size: 1.6rem;
+  }
+
+  .section-hero .flex-column-left {
+    padding: 17.2rem 1.5rem 2rem;
+  }
+
+  .section-big-message-text {
+    font-size: 2.4rem;
+  }
+
+  .subheading {
+    font-size: 1.6rem;
+  }
+
+  .package-name {
+    font-size: 1.6rem;
+  }
+
+  .numbers-container h3 {
+    font-size: 3.6rem;
+  }
+
+  .arrow-link {
+    font-size: 1.2rem;
+  }
 }

@@ -236,6 +236,7 @@ header {
     ),
     url("https://static.tbcconcept.ge/desktop/media/nvmgsymp.3xqprivate banker.png");
   background-size: cover;
+  background-position: center;
   border-radius: 0.8rem;
 }
 
@@ -311,6 +312,13 @@ header {
   background-size: 103%;
 }
 
+.description-mob {
+  display: none;
+}
+
+.digital-bank-downloads-btn-mob {
+  display: none;
+}
 .premium-background {
   background-image: linear-gradient(
       to right bottom,
@@ -449,6 +457,7 @@ header {
   display: flex;
 
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .offers-slider-buttons {
@@ -726,6 +735,22 @@ footer {
 /******************/
 /* FOOTER  */
 /******************/
+.footer-mob {
+  display: none;
+}
+
+.footer-mob .accordian {
+  margin-bottom: 2.4rem;
+}
+
+.footer-mob .footer-bottom {
+  background-color: #f9fafa;
+}
+
+.footer-mob .footer-bottom div {
+  padding: 2.4rem 0;
+}
+
 .footer-top {
   padding-top: 2.8rem;
   /* background-color: #fff; */
@@ -824,4 +849,8 @@ footer {
   color: #182cc0;
 
   transition: 200ms linear;
+}
+
+.footer-mob .accordian-item {
+  padding-left: 0;
 }
